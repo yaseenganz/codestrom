@@ -9,3 +9,21 @@ Install project
  pip install -r requirements.txt
 ```
     python manage.py runserver
+## Features
+
+ 
+- Appointment Booking & Digital Token System – Patients book appointments and receive a digital queue number.
+
+- Digital Prescription Management – Doctors generate and store prescriptions digitally, preventing loss.
+
+- Secure Medical History Storage – Patients access and manage their medical records securely.
+
+- Pharmacy Integration – Pharmacies receive prescriptions directly, reducing errors and wait times
+- Blockchain-Based Access Control – Ensures data privacy and security through smart contracts.
+
+## Tech Stack
+
+
+**Backend:** python,d-jango,open cv 
+
+**Blockchain:** soldity
