@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up / Login Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Sign up</label>
+					{% for field in form %}
+    						{{ field }}
+					{% endfor %}
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+
+	<script>
+		window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("action") === "login") {
+            document.getElementById("chk").checked = true;
+        }
+		const current_url =  window.location.href
+		console.log(current_url)
+    };
+	</script>
+</body>
+</html>
